@@ -1,0 +1,41 @@
+{
+  "name": "referral-first",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:api": "tsx apps/api/src/server.ts",
+    "dev:worker": "tsx apps/api/src/worker.ts",
+    "build": "next build",
+    "build:api": "tsc --noEmit --project apps/api/tsconfig.json",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@fastify/cookie": "^10.0.1",
+    "@fastify/jwt": "^9.0.1",
+    "@prisma/client": "^6.1.0",
+    "bullmq": "^5.28.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.1.0",
+    "ioredis": "^5.4.1",
+    "luxon": "^3.5.0",
+    "zod": "^3.23.8",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/luxon": "^3.4.2",
+    "@types/bcryptjs": "^2.4.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "prisma": "^6.1.0"
+  }
+}

@@ -37,7 +37,7 @@ const today = (timezone?: string) => {
   const day = parts.find(part => part.type === 'day')?.value ?? '01';
   return `${year}-${month}-${day}`;
 };
-const API_URL = '/api';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000').replace(/\/+$/, '');
 const formatTime = (value?: string, timezone?: string) => value ? new Date(value).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZoneName: 'short', timeZone: timezone ?? Intl.DateTimeFormat().resolvedOptions().timeZone }) : '';
 const formatDate = (value: string) => new Date(`${value}T12:00:00.000Z`).toLocaleDateString([], { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const formatWeekday = (value: string) => new Date(`${value}T12:00:00.000Z`).toLocaleDateString([], { weekday: 'long', timeZone: 'UTC' });

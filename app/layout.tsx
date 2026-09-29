@@ -3,7 +3,10 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Referral First',
-  description: 'Keep every referral opportunity moving.'
+  description: 'Keep every referral opportunity moving.',
+  icons: {
+    icon: '/logo.svg'
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
